@@ -1,4 +1,4 @@
-const DEFAULT_OPTIONS = { fbtweaker: `{ "stories": false , "rooms": false }` }
+const DEFAULT_OPTIONS = { fbtweaker: `{ "stories": false , "rooms": false, "rightrail": false  }` }
 
 function sendOptions(options) {
     let params = { active: true, currentWindow: true };

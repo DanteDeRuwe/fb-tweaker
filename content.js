@@ -1,10 +1,11 @@
 
-const DEFAULT_OPTIONS = { fbtweaker: `{ "stories": false , "rooms": false }` }
+const DEFAULT_OPTIONS = { fbtweaker: `{ "stories": false , "rooms": false, "rightrail": false  }` }
 
 function selector(msg) {
-  let { stories, rooms } = msg;
+  let { stories, rooms, rightrail } = msg;
   document.querySelector("[aria-label='Stories']").style.display = stories ? "none" : "block";
   document.querySelector("[data-pagelet='VideoChatHomeUnit']").style.display = rooms ? "none" : "block";
+  document.querySelector("[role='complementary']").style.visibility = rightrail ? "hidden" : "";
 }
 
 
