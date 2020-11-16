@@ -1,9 +1,10 @@
 
-const DEFAULT_OPTIONS = { fbtweaker: `{ "stories": false }` }
+const DEFAULT_OPTIONS = { fbtweaker: `{ "stories": false , "rooms": false }` }
 
 function selector(msg) {
-  let { stories } = msg;
+  let { stories, rooms } = msg;
   document.querySelector("[aria-label='Stories']").style.display = stories ? "none" : "block";
+  document.querySelector("[data-pagelet='VideoChatHomeUnit']").style.display = rooms ? "none" : "block";
 }
 
 
