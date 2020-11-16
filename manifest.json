@@ -1,18 +1,26 @@
 {
     "manifest_version": 2,
-    "name": "Facebook Multitool",
+    "name": "Facebook Tweaker",
     "description": "An extension that adds various options to mess with facebook layout",
     "version": "0.1.0",
     "content_scripts": [
         {
-            "matches": ["http://facebook.com/*", "https://facebook.com/*", "http://*.facebook.com/*", "https://*.facebook.com/*"],
-            "js": ["content.js"],
+            "matches": [
+                "http://facebook.com/*",
+                "https://facebook.com/*",
+                "http://*.facebook.com/*",
+                "https://*.facebook.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
             "all_frames": true
         }
     ],
-
     "browser_action": {
         "default_popup": "popup/popup.html"
     },
-    "permissions": ["storage"]
+    "permissions": [
+        "storage"
+    ]
 }

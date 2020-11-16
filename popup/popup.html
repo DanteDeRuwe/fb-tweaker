@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="popup.css" />
-    </head>
-    <body>
-        <h1>Facebook Multitool</h1>
-        <h2>By Dante De Ruwe</h2>
 
-        <div>
-            <p>
-                <input type="checkbox" id="ads" value="ads" />
-                <label for="ads">Hide Sponsored Messages</label>
-            </p>
-            <p>
-                <input type="checkbox" id="stories" value="stories" />
-                <label for="stories">Hide Stories</label>
-            </p>
-            <p>
-                <input type="checkbox" id="chat" value="chat" />
-                <label for="chat">Hide Chat</label>
-            </p>
-        </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="popup.css" />
+</head>
 
-        <p id="message"></p>
-        <script src="popup.js"></script>
-    </body>
+<body>
+    <h1>Facebook Tweaker</h1>
+    <h2>By <a href="https://deruwe.me" target="_blank" rel="noopener noreferrer">Dante De Ruwe</a></h2>
+
+    <div>
+        <p>
+            <input type="checkbox" id="stories" value="stories" />
+            <label for="stories">Hide Stories</label>
+        </p>
+    </div>
+
+    <p id="message"></p>
+
+    <small><a href="https://github.com/dantederuwe/fb-tweaker" target="_blank" rel="noopener noreferrer">Check the
+            source on Github</a></small>
+    <script src="popup.js"></script>
+</body>
+
 </html>
