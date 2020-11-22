@@ -2,6 +2,13 @@
 const DEFAULT_OPTIONS = { fbtweaker: `{ "stories": false , "rooms": false, "rightrail": false, "ads": false, "watch": false, "gaming": false,  }` }
 const HIDDEN_ADS = new Set();
 
+
+const storiesEl = document.querySelector("[aria-label='Stories']")
+const roomsEl = document.querySelector("[data-pagelet='VideoChatHomeUnit']")
+const rightrailEl = document.querySelector("[role='complementary']")
+const watchEl = document.querySelector("a[aria-label^='Watch']").closest("li")
+const gamingEl = document.querySelector("a[aria-label^='Gaming']").closest("li")
+
 function onScrollWithThrottle(fn, wait) {
   let time = Date.now();
 
@@ -47,11 +54,11 @@ function selector(msg) {
     onScrollWithThrottle(hideAds, 200);
   } else showAds();
 
-  document.querySelector("[aria-label='Stories']").style.display = stories ? "none" : "block";
-  document.querySelector("[data-pagelet='VideoChatHomeUnit']").style.display = rooms ? "none" : "block";
-  document.querySelector("[role='complementary']").style.visibility = rightrail ? "hidden" : "";
-  document.querySelector("a[aria-label^='Watch']").closest("li").style.display = watch ? "none" : "";
-  document.querySelector("a[aria-label^='Gaming']").closest("li").style.display = gaming ? "none" : "";
+  if (storiesEl) storiesEl.style.display = stories ? "none" : "";
+  if (roomsEl) roomsEl.style.display = rooms ? "none" : "";
+  if (rightrailEl) rightrailEl.style.visibility = rightrail ? "hidden" : "";
+  if (watchEl) watchEl.style.display = watch ? "none" : "";
+  if (gamingEl) gamingEl.style.display = gaming ? "none" : "";
 }
 
 
