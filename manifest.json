@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Facebook Tweaker",
     "description": "An extension that adds various options to mess with facebook layout",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "content_scripts": [
         {
             "matches": [

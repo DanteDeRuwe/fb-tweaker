@@ -1,5 +1,5 @@
 
-const DEFAULT_OPTIONS = { fbtweaker: `{ "stories": false , "rooms": false, "rightrail": false, "ads": false  }` }
+const DEFAULT_OPTIONS = { fbtweaker: `{ "stories": false , "rooms": false, "rightrail": false, "ads": false, "watch": false, "gaming": false,  }` }
 const HIDDEN_ADS = new Set();
 
 function onScrollWithThrottle(fn, wait) {
@@ -40,7 +40,7 @@ function showAds() {
 }
 
 function selector(msg) {
-  let { ads, stories, rooms, rightrail } = msg;
+  let { ads, stories, rooms, rightrail, watch, gaming } = msg;
 
   if (ads) {
     hideAds();
@@ -50,6 +50,8 @@ function selector(msg) {
   document.querySelector("[aria-label='Stories']").style.display = stories ? "none" : "block";
   document.querySelector("[data-pagelet='VideoChatHomeUnit']").style.display = rooms ? "none" : "block";
   document.querySelector("[role='complementary']").style.visibility = rightrail ? "hidden" : "";
+  document.querySelector("a[aria-label^='Watch']").closest("li").style.display = watch ? "none" : "";
+  document.querySelector("a[aria-label^='Gaming']").closest("li").style.display = gaming ? "none" : "";
 }
 
 
